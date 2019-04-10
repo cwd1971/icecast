@@ -1,7 +1,6 @@
 # cwd1971/icecast Dockerfile
 
-This repository contains **Dockerfile** of [Icecast](https://icecast.org/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.co
-m/u/cwd1971/icecast/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+This repository contains **Dockerfile** of [Icecast](https://icecast.org/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/cwd1971/icecast/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
 ## Base Docker Image
 
