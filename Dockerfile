@@ -7,7 +7,7 @@ RUN yum -y update && \
        yum -y install icecast  && \
        yum clean all
 
-VOLUME ["/etc/icecast/","/var/log/icecast"]
+VOLUME ["/etc/icecast/icecast.xml","/var/log/icecast"]
 
 EXPOSE 8000 8001 8002
-CMD ["/bin/icecast", "/etc/"]
+ENTRYPOINT ["/bin/icecast", "-c", "/etc/icecast/icecast.xml"]

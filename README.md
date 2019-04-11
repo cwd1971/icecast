@@ -6,7 +6,6 @@ This repository contains **Dockerfile** of [Icecast](https://icecast.org/) for [
 
 - [centos](https://registry.hub.docker.com/_/centos/)
 
-
 ## Installation
 
 1. Install [Docker](https://www.docker.com/).
@@ -25,8 +24,9 @@ docker run [-d] [--name MYicecast ] \
            [-p 8002:8002] \
            [--add-host "yp.shoutcast.com:37.59.27.98"] \ # If you have directory listing in xml
            [--add-host "dir.xiph.org:140.211.15.194"] \  # If you have directory listing in xml
-           --add-host "My_server:Ip.Of.Your.Server" \  # ExternalIP Address of docker host
-           -v /MY_CONF/icecast.xml:/etc/icecast.conf:z \
+           --add-host "My_server:Ip.Of.Your.Server" \  # External IP Address of docker host
+                                                       # This must be reachable by the directory servers if used
+           -v /MY_CONF/icecast.xml:/etc/icecast/icecast.conf:z \
            -v /MY_LOCAL_LOG:/var/log/icecast/:z \
            docker.io/cwd1971/icecast
 ```
