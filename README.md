@@ -20,16 +20,19 @@ To launch :
 ```
 
 docker run [-d] [--name MYicecast ] \
-           -p 8000:8000
-           -p 8001:8001
-           -p 8002:8002
+           -p 8000:8000 \
+           [-p 8001:8001] \
+           [-p 8002:8002] \
+           [--add-host "yp.shoutcast.com:37.59.27.98"] \ # If you have directory listing in xml
+           [--add-host "dir.xiph.org:140.211.15.194"] \  # If you have directory listing in xml
+           --add-host "My_server:Ip.Of.Your.Server" \  # ExternalIP Address of docker host
            -v /MY_CONF/icecast.xml:/etc/icecast.conf:z \
            -v /MY_LOCAL_LOG:/var/log/icecast/:z \
            docker.io/cwd1971/icecast
 ```
 ***
 #### /MY_CONF/icecast.xml
----
+```xml
 <icecast>
     <limits>
         <clients>100</clients>
@@ -209,4 +212,4 @@ docker run [-d] [--name MYicecast ] \
     </security>
 </icecast>
 
----
+```
