@@ -8,6 +8,6 @@ RUN yum -y update && \
        yum clean all
 
 VOLUME ["/etc/icecast/icecast.xml","/var/log/icecast"]
-
+USER 1001
 EXPOSE 8000 8001 8002
 ENTRYPOINT ["/bin/icecast", "-c", "/etc/icecast/icecast.xml"]
