@@ -32,7 +32,7 @@ docker run [-d] [--name MYicecast ] \
 ```
 ***
 #### /MY_CONF/icecast.xml
-```xml
+```
 <icecast>
     <limits>
         <clients>100</clients>
